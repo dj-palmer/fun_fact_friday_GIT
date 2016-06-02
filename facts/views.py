@@ -1,6 +1,8 @@
-from django.shortcuts import render
+import random
 
+from django.shortcuts import render
 from django.http import HttpResponse
+from django.template import loader
 
 #Importing our fact model into the views
 
@@ -9,10 +11,19 @@ from django.http import HttpResponse
 
 ##Cleaner -- imports only the class we are after (just so happens we only have 1!)
 from facts.models import Fact
-import random
 
 # Create your views here.
 def getFact(request):
 	import pdb
 	#pdb.set_trace()
-	return HttpResponse(Fact.objects.get(id=random.randint(1,Fact.objects.count())))
+	fact=Fact.objects.get(id=random.randint(1,Fact.objects.count()))
+	template = loader.get_template('facts/index.html')
+	context = {"fact" : fact}
+	return HttpResponse(template.render(context,request))
+
+def getFacts(request):
+	facts=Fact.objects.all()
+	template = loader.get_template('facts/facts.html')
+	context = {"facts" : facts}
+	return HttpResponse(template.render(context,request))
+
