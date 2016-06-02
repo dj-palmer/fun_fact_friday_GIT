@@ -1,0 +1,12 @@
+{% extends "facts/base.html" %}
+
+{% block title %}Fun Fact Friday{% endblock %}
+
+{% block body %}
+	<ul>
+	{% for fact in facts %}
+		<li>{{ fact.short_text }}</li>
+	{% endfor %}
+	</ul>
+
+{% endblock %}

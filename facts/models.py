@@ -6,5 +6,5 @@ from django.db import models
 class Fact(models.Model):
 	short_text = models.CharField(max_length=255)
 
-	def __unicode__(self):
-		return "%s" %self.short_text
+	#def __unicode__(self):
+	#	return "%s" %self.short_text
