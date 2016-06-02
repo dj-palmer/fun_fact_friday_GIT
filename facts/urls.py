@@ -1,7 +1,6 @@
 from django.conf.urls import url
-from views import hello
+from views import getFact
 
 urlpatterns = [
-    url(r'^hello/$', hello),
-    url(r'^hello/(?P<name>[-\w]?)$', hello)
+    url(r'^$', getFact)
 ]
