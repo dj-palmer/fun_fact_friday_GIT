@@ -1,2 +1,4 @@
 syntax: glob
 fff
+db.sqlite3
+*.pyc
