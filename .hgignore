@@ -1,4 +1,12 @@
 syntax: glob
+
+.DS_Store
+Thumbs.db
+*~
+*.py[co]
 fff
 db.sqlite3
 *.pyc
+
+syntax: regexp
+^static
