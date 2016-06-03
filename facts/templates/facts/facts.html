@@ -5,7 +5,12 @@
 {% block body %}
 	<ul>
 	{% for fact in facts %}
-		<li>{{ fact.short_text }}</li>
+		<li>
+			{{ fact.short_text }}
+			{% if fact.ref_link %}
+			- <a href="{{ fact.ref_link }}">{{ fact.ref_link }}</a>
+			{% endif %}
+		</li>
 	{% endfor %}
 	</ul>
 
