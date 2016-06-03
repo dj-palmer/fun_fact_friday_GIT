@@ -3,15 +3,14 @@
 {% block title %}Fun Fact Friday{% endblock %}
 
 {% block body %}
-	<ul>
-	{% for fact in facts %}
-		<li>
-			{{ fact.short_text }}
-			{% if fact.ref_link %}
-			- <a href="{{ fact.ref_link }}">{{ fact.ref_link }}</a>
-			{% endif %}
-		</li>
-	{% endfor %}
-	</ul>
-
+  <ul>
+  {% for fact in facts %}
+    <li>
+      {{ fact.short_text }}
+      {% if fact.ref_link %}
+      - <a href="{{ fact.ref_link }}">{{ fact.ref_link }}</a>
+      {% endif %}
+    </li>
+  {% endfor %}
+  </ul>
 {% endblock %}
