@@ -10,11 +10,12 @@
     <div class="details">
       {{ fact.short_text }}
     </div>
-    <div class="links">
+    <details>
+      <summary>Wait a second &hellip;</summary>
       {% if fact.ref_link %}
         <a href="{{ fact.ref_link }}">That ain't no fact!</a><br/>
       {% endif %}
       <a href="{% url 'fact' %}">That ain't fun!</a>
-    </div>
+    </details>
   </div>
 {% endblock %}
