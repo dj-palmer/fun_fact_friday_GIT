@@ -1,0 +1,20 @@
+.fact {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 36pt;
+}
+
+.fact .title {
+    font-style: italic;
+}
+
+.fact .details {
+    font-weight: bold;
+    font-size: 48pt;
+}
+
+.fact .links {
+    font-size: 16pt;
+}
