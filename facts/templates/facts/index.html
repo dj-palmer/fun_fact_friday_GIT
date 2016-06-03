@@ -3,5 +3,15 @@
 {% block title %}Fun Fact Friday{% endblock %}
 
 {% block body %}
-	{{ fact.short_text }}
+	<center>
+		<div>
+			<span style="font-size:36pt">
+				{{ fact.short_text }}
+			</span>
+		</div>
+			{% if fact.ref_link %}
+			<a href="{{ fact.ref_link }}">That ain't no fact!</a>
+			{% endif %}
+		<a href="{% url 'fact' %}">That ain't fun!</a>
+	</center>
 {% endblock %}
